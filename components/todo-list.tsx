@@ -45,7 +45,7 @@ export function TodoList() {
 
   return (
     <main className="mx-auto max-w-xl px-4 py-10">
-      <h1 className="text-2xl font-semibold text-foreground">===== To-Do List =====</h1>
+      <h1 className="text-2xl font-semibold text-foreground">To-Do List</h1>
 
       <form onSubmit={addTask} className="mt-6 flex gap-2">
         <input
@@ -53,7 +53,7 @@ export function TodoList() {
           name="description"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
-          placeholder="Enter a task"
+          placeholder="Add a task"
           required
           className="flex-1 border border-border bg-background px-3 py-2 text-foreground outline-none focus:border-ring"
         />
