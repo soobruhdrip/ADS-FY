@@ -1,11 +1,9 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'To-Do List',
   description: 'A simple to-do list task manager',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -42,7 +40,6 @@ export default function RootLayout({
     <html lang="en" className="bg-background">
       <body className="antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
