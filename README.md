@@ -1,33 +1,114 @@
-# ADS-FY
+# To-Do List
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+A simple To-Do List web application built with Next.js, React, TypeScript, and Tailwind CSS.
 
-## Built with v0
+The project lets users add tasks, edit existing tasks, and delete tasks from a simple interface.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## Features
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_sDkThIzhsqZEDpuVCRgK1abJtJUb)
+* Add new tasks
+* Edit existing tasks
+* Delete tasks
+* Simple and responsive interface
+* Client-side task management using React state
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Lucide React
+* pnpm
+
+## Project Structure
+
+```text
+.
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── todo-list.tsx
+│   └── ui/
+├── lib/
+│   └── utils.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+### 3. Start the development server
+
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Commands
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more, take a look at the following resources:
+Starts the development server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+```bash
+pnpm build
+```
+
+Creates a production build.
+
+```bash
+pnpm start
+```
+
+Starts the production server.
+
+## How It Works
+
+Tasks are stored in the `TodoList` component using React's `useState`.
+
+Each task contains:
+
+* `id` — unique task number
+* `description` — task text
+
+The application provides functions for adding, updating, and deleting tasks.
+
+## Current Limitations
+
+Tasks are currently stored only in memory. Refreshing the page will clear the task list.
+
+There is no database or user authentication.
+
+## Future Improvements
+
+* Save tasks using local storage
+* Add task completion status
+* Add task priorities
+* Add due dates
+* Add filtering and sorting
+* Add database support
+
+## License
+
+This project is available under the MIT License.
